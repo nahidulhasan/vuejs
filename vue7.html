@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue Js</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+
+	<div id="app">
+		<h1>  {{FullName}} </h1>
+
+		<input type="text" v-model="first">
+		<input type="text" v-model="last">
+			
+	</div>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.js"> </script>
+
+	<script>
+
+	new Vue({
+		el: '#app',
+
+		data: {
+			first: 'Nahidul',
+			last: 'Hasan'
+		},
+
+		computed: {
+
+			FullName: function() {
+
+				return this.first+' '+this.last;
+			}
+		}
+	})
+	</script>
+
+</body>
+</html>	
+
+
+	
